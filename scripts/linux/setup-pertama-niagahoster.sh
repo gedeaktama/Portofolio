@@ -49,17 +49,11 @@ if grep -q "DB_PASSWORD=$" .env || grep -q "DB_PASSWORD=\"\"" .env; then
   fi
 fi
 
-# 2. Generate Application Key jika kosong
-if grep -q "APP_KEY=$" .env; then
-  echo "==> 2. Men-generate APP_KEY baru..."
-  "$PHP_BIN" artisan key:generate --force
-fi
-
-# 3. Beri izin eksekusi script deploy
+# 2. Beri izin eksekusi script deploy
 chmod +x scripts/linux/deploy-niagahoster.sh
 
-# 4. Jalankan deployment penuh
-echo "==> 3. Menjalankan deploy-niagahoster.sh..."
+# 3. Jalankan deployment penuh
+echo "==> Menjalankan deploy-niagahoster.sh..."
 bash scripts/linux/deploy-niagahoster.sh
 
 echo ""

@@ -46,6 +46,11 @@ git pull origin main
 echo "==> 2. Menginstal dependensi PHP untuk produksi..."
 "$PHP_BIN" "$COMPOSER_BIN" install --no-dev --optimize-autoloader
 
+if grep -q "APP_KEY=$" .env || grep -q "APP_KEY=\"\"" .env; then
+  echo "==> Men-generate APP_KEY baru..."
+  "$PHP_BIN" artisan key:generate --force
+fi
+
 echo "==> 3. Menjalankan migrasi database..."
 "$PHP_BIN" artisan migrate --force
 
