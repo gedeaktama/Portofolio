@@ -9,9 +9,8 @@ A. SETUP PERTAMA KALI (HANYA 1 KALI SAAT AWAL):
       - Buat subdomain : profil
       - Folder tujuan  : public_html/profil
    b. Masuk menu Databases -> MySQL Databases:
-      - Buat Database  : u107454400_profil
-      - Buat User      : u107454400_profiluser
-      - Password       : (buat password dan catat)
+      - Database & User: u107454400_portofolio
+      - Password       : q+N+zF/d1
 
 2. Buka PowerShell di laptop, login via SSH:
    ssh -p 65002 u107454400@147.93.80.47

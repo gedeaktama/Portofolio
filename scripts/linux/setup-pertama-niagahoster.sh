@@ -31,13 +31,15 @@ if [ ! -f .env ]; then
   cp .env.production.example .env
 fi
 
-# Tanyakan konfigurasi database jika belum diisi
+# Informasi konfigurasi database
+echo "==> Menggunakan Database: $(grep '^DB_DATABASE=' .env | cut -d= -f2)"
+echo "==> Menggunakan Username: $(grep '^DB_USERNAME=' .env | cut -d= -f2)"
+
+# Tanyakan konfigurasi database HANYA jika password masih kosong
 if grep -q "DB_PASSWORD=$" .env || grep -q "DB_PASSWORD=\"\"" .env; then
   echo ""
   echo "----------------------------------------------------------"
-  echo "Konfigurasi Database MySQL Niagahoster:"
-  echo "Default DB Name : u107454400_profil"
-  echo "Default DB User : u107454400_profiluser"
+  echo "Password database di .env belum diisi."
   echo "----------------------------------------------------------"
   read -sp "Masukkan Password Database MySQL Anda: " DB_PASS
   echo ""
