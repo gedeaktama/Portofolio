@@ -173,9 +173,10 @@ npm run build
 ## 7. Kredensial Admin Default
 
 Setelah seeder dijalankan, akun admin resmi telah tersedia:
-* **URL Login:** `http://localhost/contoh/public/admin/login`
+* **URL Login:** `http://localhost:8080/fortofolio/public/admin/login`
 * **Email:** `erikaktama@parnaraya.ac.id`
 * **Password:** `password123`
+*(Detail catatan kredensial lengkap tersimpan di [docs/KREDENSIAL.md](docs/KREDENSIAL.md))*
 
 ### Menambahkan Akun Admin Baru Secara Aman:
 Gunakan perintah Artisan bawaan Filament:

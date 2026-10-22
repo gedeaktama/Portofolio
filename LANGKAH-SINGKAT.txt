@@ -1,0 +1,56 @@
+================================================================================
+PANDUAN CEPAT DEPLOY & UPDATE PORTOFOLIO KE NIAGAHOSTER (profil.aktama.com)
+================================================================================
+
+A. SETUP PERTAMA KALI (HANYA 1 KALI SAAT AWAL):
+--------------------------------------------------------------------------------
+1. Buka hPanel Niagahoster (Hostinger):
+   a. Masuk menu Websites -> aktama.com -> Subdomains:
+      - Buat subdomain : profil
+      - Folder tujuan  : public_html/profil
+   b. Masuk menu Databases -> MySQL Databases:
+      - Buat Database  : u107454400_profil
+      - Buat User      : u107454400_profiluser
+      - Password       : (buat password dan catat)
+
+2. Buka PowerShell di laptop, login via SSH:
+   ssh -p 65002 u107454400@147.93.80.47
+
+3. Copy & paste perintah berikut ke terminal SSH:
+   cd /home/u107454400/domains/aktama.com/public_html
+   git clone https://github.com/gedeaktama/Portofolio.git profil-source
+   cd profil-source
+   bash scripts/linux/setup-pertama-niagahoster.sh
+
+   *Script akan otomatis meminta password database, men-generate key, 
+    menginstall dependency, migrasi tabel, seeder isi data lengkap, 
+    dan menghubungkan domain profil.aktama.com.
+
+4. Pasang SSL di hPanel:
+   - Masuk Security -> SSL -> Cari profil.aktama.com -> Klik Install SSL -> Aktifkan Force HTTPS.
+
+
+================================================================================
+B. UPDATE RUTIN (SETIAP ADA PERUBAHAN WEBSITE DI KOMPUTER LOKAL):
+--------------------------------------------------------------------------------
+1. Buka folder lokal:
+   d:\Xampp2\htdocs\fortofolio
+
+2. Jika ada perubahan tampilan frontend:
+   npm run build
+
+3. Push ke GitHub:
+   git add .
+   git commit -m "Update konten portofolio"
+   git push
+
+4. Login ke SSH server:
+   ssh -p 65002 u107454400@147.93.80.47
+
+5. Deploy pembaruan di server:
+   cd /home/u107454400/domains/aktama.com/public_html/profil-source
+   bash scripts/linux/deploy-niagahoster.sh
+
+6. Cek hasil:
+   https://profil.aktama.com
+   https://profil.aktama.com/admin

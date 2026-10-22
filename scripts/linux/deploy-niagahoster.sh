@@ -49,17 +49,26 @@ echo "==> 2. Menginstal dependensi PHP untuk produksi..."
 echo "==> 3. Menjalankan migrasi database..."
 "$PHP_BIN" artisan migrate --force
 
-echo "==> 4. Mengoptimasi cache Laravel (config, routes, views)..."
+echo "==> 4. Memeriksa data awal database..."
+USER_COUNT=$("$PHP_BIN" artisan tinker --execute="echo \App\Models\User::count();" 2>/dev/null || echo "0")
+if [ "$USER_COUNT" = "0" ] || [ -z "$USER_COUNT" ]; then
+  echo "==> Database belum memiliki data, menjalankan seeder awal..."
+  "$PHP_BIN" artisan db:seed --force
+else
+  echo "==> Data sudah ada ($USER_COUNT user terdaftar), lewati seeder."
+fi
+
+echo "==> 5. Mengoptimasi cache Laravel (config, routes, views)..."
 "$PHP_BIN" artisan optimize:clear
 "$PHP_BIN" artisan config:cache
 "$PHP_BIN" artisan route:cache
 "$PHP_BIN" artisan view:cache
 
-echo "==> 5. Sinkronisasi aset statis ke folder publik subdomain..."
+echo "==> 6. Sinkronisasi aset statis ke folder publik subdomain..."
 mkdir -p "$WEB_ROOT"
 cp -r public/. "$WEB_ROOT"/
 
-echo "==> 6. Menyiapkan jembatan index.php untuk public_html/profil..."
+echo "==> 7. Menyiapkan jembatan index.php untuk public_html/profil..."
 cat > "$WEB_ROOT/index.php" <<'PHP'
 <?php
 
@@ -82,10 +91,14 @@ $app = require_once __DIR__.'/../profil-source/bootstrap/app.php';
 $app->handleRequest(Request::capture());
 PHP
 
-echo "==> 7. Mengonfigurasi symlink storage publik..."
+echo "==> 8. Mengonfigurasi symlink storage publik..."
 rm -rf "$WEB_ROOT/storage"
 ln -s ../profil-source/storage/app/public "$WEB_ROOT/storage"
+
+echo "==> 9. Memastikan izin akses folder storage & cache..."
+chmod -R 775 storage bootstrap/cache
 
 echo "=========================================================="
 echo "✅ DEPLOYMENT BERHASIL! Website aktif di https://profil.aktama.com"
 echo "=========================================================="
+

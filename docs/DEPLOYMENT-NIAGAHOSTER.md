@@ -62,8 +62,17 @@ git clone https://github.com/gedeaktama/Portofolio.git profil-source
 cd profil-source
 ```
 
-### B. Buat dan Sesuaikan File `.env`
-Salin template produksi yang telah disediakan:
+### B. Jalankan Setup Otomatis (Metode Tercepat & Direkomendasikan)
+Cukup jalankan script setup awal:
+```bash
+bash scripts/linux/setup-pertama-niagahoster.sh
+```
+*Script ini akan otomatis membuat file `.env`, meminta password database Anda, men-generate `APP_KEY`, menginstall dependensi, migrasi database, memasukkan data awal profil lengkap, dan menghubungkan domain ke web root `public_html/profil`.*
+
+---
+
+### C. (Alternatif Manual jika Tidak Menggunakan Script Setup)
+Jika ingin mengonfigurasi `.env` secara manual:
 ```bash
 cp .env.production.example .env
 nano .env
@@ -84,16 +93,10 @@ DB_DATABASE=u107454400_profil
 DB_USERNAME=u107454400_profiluser
 DB_PASSWORD=ISI_PASSWORD_DATABASE_ANDA
 ```
-Simpan file dengan menekan `Ctrl + O`, lalu `Enter`, kemudian `Ctrl + X`.
-
-### C. Generate Application Key
+Generate key dan jalankan deploy:
 ```bash
 /opt/alt/php83/usr/bin/php artisan key:generate
-```
-
-### D. Beri Hak Eksekusi Script Deploy
-```bash
-chmod +x scripts/linux/deploy-niagahoster.sh
+bash scripts/linux/deploy-niagahoster.sh
 ```
 
 ---

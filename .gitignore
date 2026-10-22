@@ -28,3 +28,6 @@ _archive/
 *.zip
 generate_uts_doc.py
 *.py
+docs/KREDENSIAL.md
+dbbackup/
+
