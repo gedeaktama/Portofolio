@@ -95,8 +95,8 @@
 
         <!-- Author Box -->
         <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col sm:flex-row items-center gap-6">
-            <div class="w-20 h-20 rounded-2xl overflow-hidden border border-cyan-500/30 shrink-0">
-                <img src="{{ asset('images/profile.png') }}" alt="Gede Erik Aktama" class="w-full h-full object-cover">
+            <div class="w-20 h-20 rounded-2xl overflow-hidden border border-cyan-500/30 shrink-0 bg-slate-900/60">
+                <img src="{{ asset('images/profile.png') }}" alt="Gede Erik Aktama" class="w-full h-full object-cover object-top">
             </div>
             <div class="space-y-1 text-center sm:text-left">
                 <h4 class="text-base font-bold text-white">{{ $post->author->name ?? 'Gede Erik Aktama, S.Pd., M.Pd.' }}</h4>

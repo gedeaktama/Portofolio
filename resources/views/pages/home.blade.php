@@ -78,9 +78,8 @@
                 </div>
             </div>
 
-            <!-- Right Column: Visual Frame with Real Photo -->
             <div class="lg:col-span-5 flex justify-center relative">
-                <div class="relative w-full max-w-sm sm:max-w-md aspect-square">
+                <div class="relative w-full max-w-sm sm:max-w-md aspect-[4/5]">
                     <!-- Glow Behind -->
                     <div class="absolute -inset-4 bg-gradient-to-tr from-blue-600/30 to-cyan-500/20 rounded-3xl blur-2xl"></div>
 

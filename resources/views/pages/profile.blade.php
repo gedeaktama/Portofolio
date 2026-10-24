@@ -30,8 +30,8 @@
             <div class="lg:col-span-4 space-y-6">
                 <!-- Profile Card -->
                 <div class="glass-card p-6 rounded-2xl text-center">
-                    <div class="w-40 h-40 mx-auto rounded-2xl overflow-hidden border-2 border-cyan-500/30 p-1 mb-5">
-                        <img src="{{ asset('images/profile.png') }}" alt="Gede Erik Aktama" class="w-full h-full object-cover rounded-xl">
+                    <div class="w-44 h-56 mx-auto rounded-2xl overflow-hidden border-2 border-cyan-500/30 p-1 mb-5 bg-slate-900/60 shadow-inner">
+                        <img src="{{ asset('images/profile.png') }}" alt="Gede Erik Aktama" class="w-full h-full object-cover object-top rounded-xl shadow-md">
                     </div>
                     <h3 class="text-xl font-bold text-white">{{ $profile->full_name ?? 'Gede Erik Aktama, S.Pd., M.Pd.' }}</h3>
                     <p class="text-xs text-cyan-400 font-semibold uppercase tracking-wider mt-1">Dosen & AI Specialist</p>
