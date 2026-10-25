@@ -54,14 +54,8 @@ fi
 echo "==> 3. Menjalankan migrasi database..."
 "$PHP_BIN" artisan migrate --force
 
-echo "==> 4. Memeriksa data awal database..."
-USER_COUNT=$("$PHP_BIN" artisan tinker --execute="echo \App\Models\User::count();" 2>/dev/null || echo "0")
-if [ "$USER_COUNT" = "0" ] || [ -z "$USER_COUNT" ]; then
-  echo "==> Database belum memiliki data, menjalankan seeder awal..."
-  "$PHP_BIN" artisan db:seed --force
-else
-  echo "==> Data sudah ada ($USER_COUNT user terdaftar), lewati seeder."
-fi
+echo "==> 4. Memperbarui data profil, publikasi buku ber-ISBN, dan jabatan fungsional..."
+"$PHP_BIN" artisan db:seed --force
 
 echo "==> 5. Mengoptimasi cache Laravel (config, routes, views)..."
 "$PHP_BIN" artisan optimize:clear
