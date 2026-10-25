@@ -19,38 +19,39 @@ class CommunityServicesTable
     {
         return $table
             ->columns([
+                ImageColumn::make('image_url')
+                    ->label('Dokumentasi')
+                    ->rounded()
+                    ->defaultImageUrl(asset('images/profile.png')),
                 TextColumn::make('title')
-                    ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('location')
+                    ->label('Judul Kegiatan PKM')
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold')
+                    ->wrap(),
+                TextColumn::make('role')
+                    ->label('Peran')
+                    ->badge()
+                    ->color('primary')
                     ->searchable(),
                 TextColumn::make('partner')
+                    ->label('Mitra PKM')
                     ->searchable(),
-                TextColumn::make('partner_website')
+                TextColumn::make('location')
+                    ->label('Lokasi')
                     ->searchable(),
                 TextColumn::make('year')
-                    ->searchable(),
-                TextColumn::make('role')
-                    ->searchable(),
-                ImageColumn::make('image_url'),
+                    ->label('Tahun')
+                    ->badge()
+                    ->color('info')
+                    ->sortable(),
                 IconColumn::make('is_featured')
+                    ->label('Unggulan')
                     ->boolean(),
                 TextColumn::make('order')
+                    ->label('Urutan')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 TrashedFilter::make(),

@@ -8,7 +8,9 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 
@@ -18,56 +20,48 @@ class PublicationsTable
     {
         return $table
             ->columns([
+                ImageColumn::make('file_path')
+                    ->label('Sertifikat / Sampul')
+                    ->rounded()
+                    ->defaultImageUrl(asset('images/profile.png')),
                 TextColumn::make('title')
-                    ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('authors')
-                    ->searchable(),
-                IconColumn::make('is_first_author')
-                    ->boolean(),
-                TextColumn::make('publication_year')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('journal_name')
+                    ->label('Judul Karya')
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold')
+                    ->wrap(),
+                TextColumn::make('category')
+                    ->label('Kategori')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'Buku Referensi & Ajar' => 'success',
+                        'Buku & Hak Cipta (HKI)' => 'warning',
+                        default => 'info',
+                    })
                     ->searchable(),
                 TextColumn::make('indexing_status')
+                    ->label('ISBN / HKI / Akreditasi')
+                    ->badge()
+                    ->color('gray')
                     ->searchable(),
-                TextColumn::make('volume')
-                    ->searchable(),
-                TextColumn::make('issue')
-                    ->searchable(),
-                TextColumn::make('pages')
-                    ->searchable(),
-                TextColumn::make('doi')
-                    ->searchable(),
-                TextColumn::make('url')
-                    ->searchable(),
-                TextColumn::make('keywords')
-                    ->searchable(),
-                TextColumn::make('category')
-                    ->searchable(),
-                TextColumn::make('file_path')
-                    ->searchable(),
+                TextColumn::make('journal_name')
+                    ->label('Penerbit / Jurnal')
+                    ->searchable()
+                    ->limit(25),
+                TextColumn::make('publication_year')
+                    ->label('Tahun')
+                    ->sortable(),
                 IconColumn::make('is_published')
+                    ->label('Publik')
                     ->boolean(),
                 TextColumn::make('order')
+                    ->label('Urutan')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
+                SelectFilter::make('category')
+                    ->label('Kategori'),
                 TrashedFilter::make(),
             ])
             ->recordActions([

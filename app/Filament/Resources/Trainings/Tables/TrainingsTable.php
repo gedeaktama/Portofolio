@@ -19,43 +19,38 @@ class TrainingsTable
     {
         return $table
             ->columns([
+                ImageColumn::make('image_url')
+                    ->label('Dokumentasi')
+                    ->rounded()
+                    ->defaultImageUrl(asset('images/profile.png')),
                 TextColumn::make('title')
-                    ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                TextColumn::make('theme')
+                    ->label('Nama Kegiatan')
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold')
+                    ->wrap(),
+                TextColumn::make('role')
+                    ->label('Peran')
+                    ->badge()
+                    ->color('primary')
                     ->searchable(),
                 TextColumn::make('organizer')
-                    ->searchable(),
-                TextColumn::make('role')
+                    ->label('Penyelenggara')
                     ->searchable(),
                 TextColumn::make('event_date')
-                    ->date()
+                    ->label('Tanggal')
+                    ->date('d M Y')
                     ->sortable(),
                 TextColumn::make('location')
-                    ->searchable(),
-                ImageColumn::make('image_url'),
-                TextColumn::make('slides_url')
-                    ->searchable(),
-                TextColumn::make('certificate_url')
+                    ->label('Lokasi')
                     ->searchable(),
                 IconColumn::make('is_featured')
+                    ->label('Unggulan')
                     ->boolean(),
                 TextColumn::make('order')
+                    ->label('Urutan')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 TrashedFilter::make(),

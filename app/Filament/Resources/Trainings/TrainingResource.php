@@ -21,10 +21,8 @@ class TrainingResource extends Resource
     protected static ?string $model = Training::class;
     protected static string|\UnitEnum|null $navigationGroup = 'Portofolio & Kegiatan';
     protected static ?int $navigationSort = 3;
-    protected static ?string $navigationLabel = 'Pelatihan & Seminar';
-
-
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $navigationLabel = 'Pelatihan & Narasumber';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedPresentationChartLine;
 
     public static function form(Schema $schema): Schema
     {

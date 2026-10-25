@@ -21,10 +21,8 @@ class PublicationResource extends Resource
     protected static ?string $model = Publication::class;
     protected static string|\UnitEnum|null $navigationGroup = 'Akademik & Riset';
     protected static ?int $navigationSort = 1;
-    protected static ?string $navigationLabel = 'Publikasi Ilmiah';
-
-
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $navigationLabel = 'Publikasi & Buku Ber-ISBN';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBookOpen;
 
     public static function form(Schema $schema): Schema
     {

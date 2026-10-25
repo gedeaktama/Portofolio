@@ -21,10 +21,8 @@ class ResearchProjectResource extends Resource
     protected static ?string $model = ResearchProject::class;
     protected static string|\UnitEnum|null $navigationGroup = 'Akademik & Riset';
     protected static ?int $navigationSort = 2;
-    protected static ?string $navigationLabel = 'Penelitian';
-
-
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $navigationLabel = 'Penelitian & Riset';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBeaker;
 
     public static function form(Schema $schema): Schema
     {

@@ -10,6 +10,7 @@ use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 
@@ -19,39 +20,61 @@ class PortfolioProjectsTable
     {
         return $table
             ->columns([
-                TextColumn::make('project_category_id')
-                    ->numeric()
-                    ->sortable(),
+                ImageColumn::make('image_url')
+                    ->label('Mockup')
+                    ->rounded()
+                    ->defaultImageUrl(asset('images/profile.png')),
                 TextColumn::make('title')
-                    ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
-                ImageColumn::make('image_url'),
-                TextColumn::make('demo_url')
-                    ->searchable(),
-                TextColumn::make('repository_url')
+                    ->label('Nama Proyek')
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold')
+                    ->wrap(),
+                TextColumn::make('category.name')
+                    ->label('Kategori')
+                    ->badge()
+                    ->color('info')
+                    ->sortable()
                     ->searchable(),
                 TextColumn::make('status')
-                    ->searchable(),
+                    ->label('Status')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'completed' => 'success',
+                        'in_progress' => 'warning',
+                        'maintenance' => 'gray',
+                        default => 'info',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'completed' => 'Selesai',
+                        'in_progress' => 'Pengerjaan',
+                        'maintenance' => 'Maintenance',
+                        default => ucfirst($state),
+                    }),
+                TextColumn::make('technologies')
+                    ->label('Tech Stack')
+                    ->badge()
+                    ->color('gray')
+                    ->separator(',')
+                    ->limitList(3),
                 IconColumn::make('is_featured')
+                    ->label('Unggulan')
                     ->boolean(),
                 TextColumn::make('order')
+                    ->label('Urutan')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
+                SelectFilter::make('project_category_id')
+                    ->label('Kategori')
+                    ->relationship('category', 'name'),
+                SelectFilter::make('status')
+                    ->options([
+                        'completed' => 'Selesai',
+                        'in_progress' => 'Dalam Pengerjaan',
+                        'maintenance' => 'Pemeliharaan',
+                    ]),
                 TrashedFilter::make(),
             ])
             ->recordActions([

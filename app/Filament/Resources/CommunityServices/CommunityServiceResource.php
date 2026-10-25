@@ -21,10 +21,8 @@ class CommunityServiceResource extends Resource
     protected static ?string $model = CommunityService::class;
     protected static string|\UnitEnum|null $navigationGroup = 'Akademik & Riset';
     protected static ?int $navigationSort = 3;
-    protected static ?string $navigationLabel = 'Pengabdian (PKM)';
-
-
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $navigationLabel = 'Pengabdian Masyarakat (PKM)';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedAcademicCap;
 
     public static function form(Schema $schema): Schema
     {

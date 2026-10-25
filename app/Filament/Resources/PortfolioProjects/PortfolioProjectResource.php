@@ -21,10 +21,8 @@ class PortfolioProjectResource extends Resource
     protected static ?string $model = PortfolioProject::class;
     protected static string|\UnitEnum|null $navigationGroup = 'Portofolio & Kegiatan';
     protected static ?int $navigationSort = 1;
-    protected static ?string $navigationLabel = 'Proyek Teknologi';
-
-
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $navigationLabel = 'Portofolio Proyek Sistem';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCpuChip;
 
     public static function form(Schema $schema): Schema
     {
