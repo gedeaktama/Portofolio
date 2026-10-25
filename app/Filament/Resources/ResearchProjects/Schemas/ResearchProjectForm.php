@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\ResearchProjects\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -40,39 +40,20 @@ class ResearchProjectForm
                                             ->required()
                                             ->unique(ignoreRecord: true)
                                             ->maxLength(255),
-                                        RichEditor::make('summary')
+                                        TinyEditor::make('summary')
                                             ->label('Abstrak / Ringkasan Riset')
                                             ->placeholder('Uraikan latar belakang riset, rumusan masalah, metodologi, dan tujuan penelitian...')
                                             ->required()
+                                            ->profile('default')
                                             ->fileAttachmentsDirectory('research/content')
-                                            ->toolbarButtons([
-                                                'attachFiles',
-                                                'blockquote',
-                                                'bold',
-                                                'bulletList',
-                                                'codeBlock',
-                                                'h2',
-                                                'h3',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'strike',
-                                                'underline',
-                                                'undo',
-                                            ]),
-                                        RichEditor::make('output_results')
+                                            ->showMenuBar()
+                                            ->minHeight(400),
+                                        TinyEditor::make('output_results')
                                             ->label('Temuan & Luaran Penelitian')
                                             ->placeholder('Capaian riset: prototipe software/hardware, persentase akurasi model, publikasi terakreditasi, atau HKI...')
-                                            ->toolbarButtons([
-                                                'bold',
-                                                'bulletList',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'undo',
-                                            ]),
+                                            ->profile('default')
+                                            ->showMenuBar()
+                                            ->minHeight(250),
                                         TextInput::make('document_url')
                                             ->label('Tautan Naskah / Paper / DOI')
                                             ->url()

@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\CommunityServices\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Grid;
@@ -39,39 +39,20 @@ class CommunityServiceForm
                                             ->required()
                                             ->unique(ignoreRecord: true)
                                             ->maxLength(255),
-                                        RichEditor::make('description')
+                                        TinyEditor::make('description')
                                             ->label('Deskripsi Lengkap Pelaksanaan PKM')
                                             ->placeholder('Uraikan latar belakang masalah mitra, tujuan kegiatan, metode pelatihan/workshop, dan jalannya kegiatan...')
                                             ->required()
+                                            ->profile('default')
                                             ->fileAttachmentsDirectory('community-services/content')
-                                            ->toolbarButtons([
-                                                'attachFiles',
-                                                'blockquote',
-                                                'bold',
-                                                'bulletList',
-                                                'codeBlock',
-                                                'h2',
-                                                'h3',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'strike',
-                                                'underline',
-                                                'undo',
-                                            ]),
-                                        RichEditor::make('outcomes')
+                                            ->showMenuBar()
+                                            ->minHeight(400),
+                                        TinyEditor::make('outcomes')
                                             ->label('Dampak & Luaran Hasil PKM (Outcomes)')
                                             ->placeholder('Contoh: Sertifikat pelatihan bagi 50 guru, modul ajar digital, peningkatan pemahaman 85%, artikel pengabdian...')
-                                            ->toolbarButtons([
-                                                'bold',
-                                                'bulletList',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'undo',
-                                            ]),
+                                            ->profile('default')
+                                            ->showMenuBar()
+                                            ->minHeight(250),
                                     ]),
                             ])
                             ->columnSpan(['default' => 1, 'lg' => 2]),

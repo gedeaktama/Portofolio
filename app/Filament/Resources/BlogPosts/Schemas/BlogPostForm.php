@@ -4,7 +4,7 @@ namespace App\Filament\Resources\BlogPosts\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -47,27 +47,14 @@ class BlogPostForm
                                             ->label('Ringkasan Singkat (Excerpt)')
                                             ->placeholder('Tulis ringkasan singkat artikel untuk ditampilkan di feed kartu pratinjau dan media sosial...')
                                             ->rows(3),
-                                        RichEditor::make('content')
+                                        TinyEditor::make('content')
                                             ->label('Isi Artikel Lengkap')
-                                            ->placeholder('Mulai menulis artikel di sini... Gunakan heading, gambar, kutipan, dan kode untuk memperkaya artikel.')
+                                            ->placeholder('Mulai menulis artikel di sini... Gunakan heading, tabel, format teks, gambar, kode HTML, dan kutipan untuk memperkaya naskah.')
                                             ->required()
+                                            ->profile('default')
                                             ->fileAttachmentsDirectory('posts/content')
-                                            ->toolbarButtons([
-                                                'attachFiles',
-                                                'blockquote',
-                                                'bold',
-                                                'bulletList',
-                                                'codeBlock',
-                                                'h2',
-                                                'h3',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'strike',
-                                                'underline',
-                                                'undo',
-                                            ]),
+                                            ->showMenuBar()
+                                            ->minHeight(450),
                                     ]),
 
                                 Section::make('Optimasi Mesin Pencari (SEO)')

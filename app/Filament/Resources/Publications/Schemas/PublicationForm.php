@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\Publications\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -45,19 +45,13 @@ class PublicationForm
                                             ->required()
                                             ->default('Gede Erik Aktama, S.Pd., M.Pd.')
                                             ->placeholder('Gede Erik Aktama, S.Pd., M.Pd., dkk.'),
-                                        RichEditor::make('abstract')
+                                        TinyEditor::make('abstract')
                                             ->label('Sinopsis Buku / Abstrak Publikasi')
                                             ->placeholder('Sinopsis lengkap buku referensi atau naskah jurnal...')
+                                            ->profile('default')
                                             ->fileAttachmentsDirectory('publications/content')
-                                            ->toolbarButtons([
-                                                'bold',
-                                                'bulletList',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'undo',
-                                            ]),
+                                            ->showMenuBar()
+                                            ->minHeight(350),
                                         TextInput::make('keywords')
                                             ->label('Kata Kunci (Keywords)')
                                             ->placeholder('Contoh: Python, Algoritma, Basis Data, Computer Vision, AI'),

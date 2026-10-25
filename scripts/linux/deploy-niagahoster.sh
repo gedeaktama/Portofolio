@@ -58,7 +58,11 @@ echo "==> 3. Menjalankan migrasi database..."
 echo "==> 4. Memperbarui data profil, publikasi buku ber-ISBN, dan jabatan fungsional..."
 "$PHP_BIN" artisan db:seed --force
 
-echo "==> 5. Mengoptimasi cache Laravel (config, routes, views)..."
+echo "==> 5. Mempublikasikan aset Filament & TinyMCE..."
+"$PHP_BIN" artisan filament:upgrade
+"$PHP_BIN" artisan vendor:publish --provider="AmidEsfahani\FilamentTinyEditor\TinyeditorServiceProvider" --force
+
+echo "==> 6. Mengoptimasi cache Laravel (config, routes, views)..."
 "$PHP_BIN" artisan optimize:clear
 "$PHP_BIN" artisan config:cache
 "$PHP_BIN" artisan route:cache

@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\PortfolioProjects\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
@@ -46,39 +46,20 @@ class PortfolioProjectForm
                                             ->label('Tantangan / Latar Belakang Masalah')
                                             ->placeholder('Jelaskan permasalahan riil yang melatarbelakangi dibangunnya proyek ini...')
                                             ->rows(3),
-                                        RichEditor::make('solution_description')
+                                        TinyEditor::make('solution_description')
                                             ->label('Solusi & Implementasi Teknis')
                                             ->placeholder('Uraikan arsitektur sistem, algoritma, serta bagaimana solusi ini mengatasi masalah...')
                                             ->required()
+                                            ->profile('default')
                                             ->fileAttachmentsDirectory('projects/content')
-                                            ->toolbarButtons([
-                                                'attachFiles',
-                                                'blockquote',
-                                                'bold',
-                                                'bulletList',
-                                                'codeBlock',
-                                                'h2',
-                                                'h3',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'strike',
-                                                'underline',
-                                                'undo',
-                                            ]),
-                                        RichEditor::make('key_features')
+                                            ->showMenuBar()
+                                            ->minHeight(400),
+                                        TinyEditor::make('key_features')
                                             ->label('Fitur-Fitur Kunci Sistem')
                                             ->placeholder('Daftar kapabilitas utama sistem yang telah dibangun...')
-                                            ->toolbarButtons([
-                                                'bold',
-                                                'bulletList',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'undo',
-                                            ]),
+                                            ->profile('default')
+                                            ->showMenuBar()
+                                            ->minHeight(250),
                                     ]),
 
                                 Section::make('Tautan & Akses Demo')

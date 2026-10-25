@@ -4,7 +4,7 @@ namespace App\Filament\Resources\Trainings\Schemas;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Grid;
@@ -43,26 +43,13 @@ class TrainingForm
                                         TextInput::make('theme')
                                             ->label('Tema / Fokus Pelatihan')
                                             ->placeholder('Contoh: Kecerdasan Artifisial Terapan & Python untuk Pendidik'),
-                                        RichEditor::make('description')
+                                        TinyEditor::make('description')
                                             ->label('Deskripsi Materi Pelatihan')
                                             ->placeholder('Uraikan silabus pelatihan, metode praktikum, dan materi yang disampaikan...')
+                                            ->profile('default')
                                             ->fileAttachmentsDirectory('trainings/content')
-                                            ->toolbarButtons([
-                                                'attachFiles',
-                                                'blockquote',
-                                                'bold',
-                                                'bulletList',
-                                                'codeBlock',
-                                                'h2',
-                                                'h3',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                'strike',
-                                                'underline',
-                                                'undo',
-                                            ]),
+                                            ->showMenuBar()
+                                            ->minHeight(400),
                                     ]),
 
                                 Section::make('Materi & Sertifikat Digital')
