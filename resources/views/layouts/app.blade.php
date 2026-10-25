@@ -100,8 +100,9 @@
                     <a href="{{ route('ventures') }}" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors {{ request()->routeIs('ventures') ? 'text-white bg-blue-600/20 text-blue-400 border border-blue-500/30' : 'text-slate-300 hover:text-white hover:bg-white/5' }}">
                         Aktama Digital
                     </a>
-                    <a href="{{ route('blog') }}" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors {{ request()->routeIs('blog*') ? 'text-white bg-blue-600/20 text-blue-400 border border-blue-500/30' : 'text-slate-300 hover:text-white hover:bg-white/5' }}">
-                        Blog
+                    <a href="https://aktama.com/artikel" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-1.5" title="Artikel & Wawasan di aktama.com">
+                        <span>Artikel</span>
+                        <i data-lucide="external-link" class="w-3 h-3 text-cyan-400"></i>
                     </a>
                     <a href="{{ route('contact') }}" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors {{ request()->routeIs('contact') ? 'text-white bg-blue-600/20 text-blue-400 border border-blue-500/30' : 'text-slate-300 hover:text-white hover:bg-white/5' }}">
                         Kontak
@@ -133,13 +134,16 @@
         <div x-show="mobileMenu" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="lg:hidden border-t border-white/10 bg-[#0c1427]/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-1">
             <a href="{{ route('home') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Beranda</a>
             <a href="{{ route('profile') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Profil</a>
-            <a href="{{ route('publications') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Publikasi Ilmiah</a>
+            <a href="{{ route('publications') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Publikasi & Buku</a>
             <a href="{{ route('research.community') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Penelitian & PKM</a>
             <a href="{{ route('projects') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Proyek Teknologi</a>
             <a href="{{ route('academic') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Akademik & RPL</a>
             <a href="{{ route('trainings') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Pelatihan & Seminar</a>
             <a href="{{ route('ventures') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Aktama Digital & Music</a>
-            <a href="{{ route('blog') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Blog & Artikel</a>
+            <a href="https://aktama.com/artikel" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-base font-medium text-cyan-300 hover:bg-white/10">
+                <span>Artikel & Wawasan (aktama.com)</span>
+                <i data-lucide="external-link" class="w-4 h-4 text-cyan-400"></i>
+            </a>
             <a href="{{ route('contact') }}" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Kontak</a>
             <div class="pt-4 flex flex-col gap-2">
                 <a href="{{ route('contact') }}" class="w-full text-center py-2.5 px-4 rounded-xl bg-blue-600 text-white font-semibold shadow-md">Hubungi Saya</a>
@@ -196,7 +200,7 @@
                         </div>
                     </div>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        Dosen Program Studi Sistem Komputer Universitas Parna Raya (UNIPAR) Manado, Fasilitator Nasional KKA Kemdikdasmen, dan CEO PT Aktama Digital Antika.
+                        Dosen Lektor Sistem Komputer Universitas Parna Raya (UNIPAR) Manado, Fasilitator Nasional KKA Kemdikdasmen, dan CEO PT Aktama Digital Antika.
                     </p>
                 </div>
 
@@ -204,8 +208,8 @@
                 <div class="space-y-3">
                     <h5 class="text-sm font-semibold text-white uppercase tracking-wider">Navigasi Utama</h5>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="{{ route('profile') }}" class="hover:text-cyan-400 transition-colors">Profil & Karir</a></li>
-                        <li><a href="{{ route('publications') }}" class="hover:text-cyan-400 transition-colors">Publikasi SINTA</a></li>
+                        <li><a href="{{ route('profile') }}" class="hover:text-cyan-400 transition-colors">Profil & Karir Lektor</a></li>
+                        <li><a href="{{ route('publications') }}" class="hover:text-cyan-400 transition-colors">Publikasi & Buku Ber-ISBN</a></li>
                         <li><a href="{{ route('research.community') }}" class="hover:text-cyan-400 transition-colors">Riset & PKM Woloan</a></li>
                         <li><a href="{{ route('projects') }}" class="hover:text-cyan-400 transition-colors">Katalog Proyek AI & IoT</a></li>
                         <li><a href="{{ route('academic') }}" class="hover:text-cyan-400 transition-colors">Akademik UNIPAR & RPL</a></li>
@@ -217,6 +221,7 @@
                     <h5 class="text-sm font-semibold text-white uppercase tracking-wider">Afiliasi & Brand</h5>
                     <ul class="space-y-2 text-sm">
                         <li><a href="https://www.parnaraya.ac.id" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5"><span>Universitas Parna Raya</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></a></li>
+                        <li><a href="https://aktama.com/artikel" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5"><span>Artikel & Wawasan (aktama.com)</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></a></li>
                         <li><a href="https://woloanjaya.com/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5"><span>Mitra PKM Woloan Jaya</span><i data-lucide="external-link" class="w-3.5 h-3.5"></i></a></li>
                         <li><a href="{{ route('ventures') }}" class="hover:text-cyan-400 transition-colors">Aktama Digital (Pelatihan TI)</a></li>
                         <li><a href="{{ route('ventures') }}" class="hover:text-cyan-400 transition-colors">Aktama Music (Karya Multimedia)</a></li>

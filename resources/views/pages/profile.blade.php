@@ -15,7 +15,7 @@
                 Gede Erik Aktama, <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">S.Pd., M.Pd.</span>
             </h1>
             <p class="mt-3 text-base sm:text-lg text-slate-300">
-                Dosen Program Studi Sistem Komputer Universitas Parna Raya, Fasilitator Nasional KKA Kemdikdasmen, dan CEO PT Aktama Digital Antika.
+                Dosen Lektor Sistem Komputer Universitas Parna Raya, Fasilitator Nasional KKA Kemdikdasmen, dan CEO PT Aktama Digital Antika.
             </p>
         </div>
     </div>
@@ -34,7 +34,7 @@
                         <img src="{{ asset('images/profile.png') }}" alt="Gede Erik Aktama" class="w-full h-full object-cover object-top rounded-xl shadow-md">
                     </div>
                     <h3 class="text-xl font-bold text-white">{{ $profile->full_name ?? 'Gede Erik Aktama, S.Pd., M.Pd.' }}</h3>
-                    <p class="text-xs text-cyan-400 font-semibold uppercase tracking-wider mt-1">Dosen & AI Specialist</p>
+                    <p class="text-xs text-cyan-400 font-semibold uppercase tracking-wider mt-1">Dosen Lektor • Basis Data & Pemrograman</p>
                     
                     <div class="mt-6 pt-6 border-t border-white/10 text-left space-y-3 text-xs text-slate-300">
                         <div class="flex items-center gap-2.5">
@@ -59,6 +59,50 @@
                     </div>
                 </div>
 
+                <!-- Academic Rank Box (SK Kemendiktisaintek) -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-blue-500 space-y-3">
+                    <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                        <i data-lucide="award" class="w-4 h-4 text-blue-400"></i>
+                        <span>Jabatan Fungsional Akademik</span>
+                    </h4>
+                    <div class="space-y-2 text-xs text-slate-300">
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span class="text-slate-400">Jabatan:</span>
+                            <span class="font-bold text-white">Lektor (TMT 1 Jan 2026)</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span class="text-slate-400">Pangkat/Gol:</span>
+                            <span class="text-cyan-300 font-medium">Penata Muda Tk. I (III/b)</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span class="text-slate-400">Kepakaran:</span>
+                            <span class="text-white font-medium">Basis Data & Pemrograman</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">SK Resmi:</span>
+                            <span class="font-mono text-[11px] text-slate-300">0044/LL16/KP.07.01/2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indeksasi Akademik (SINTA & Scholar) -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-cyan-500 space-y-3">
+                    <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                        <i data-lucide="database" class="w-4 h-4 text-cyan-400"></i>
+                        <span>Indeksasi Ilmiah Resmi</span>
+                    </h4>
+                    <div class="space-y-2.5">
+                        <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6798063" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 text-xs transition-colors group">
+                            <span class="text-slate-300 group-hover:text-cyan-300 font-medium">SINTA ID: 6798063</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5 text-cyan-400"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=ZMLrCEUAAAAJ" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 text-xs transition-colors group">
+                            <span class="text-slate-300 group-hover:text-cyan-300 font-medium">Google Scholar Profile</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5 text-cyan-400"></i>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Academic Integrity Box -->
                 <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-emerald-500">
                     <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
@@ -66,7 +110,7 @@
                         <span>Komitmen Integritas</span>
                     </h4>
                     <p class="text-xs text-slate-300 leading-relaxed">
-                        Menjunjung tinggi etika akademik dengan data riset empiris yang valid, bebas dari fabrikasi sitasi atau DOI fiktif, serta berpedoman teguh pada regulasi resmi pemerintah.
+                        Menjunjung tinggi etika akademik dengan data riset empiris yang valid, bebas dari fabrikasi sitasi atau DOI fiktif, serta berpedoman teguh pada regulasi resmi kementerian.
                     </p>
                 </div>
             </div>
@@ -81,13 +125,16 @@
                     </h3>
                     <div class="text-sm text-slate-300 leading-relaxed space-y-4">
                         <p>
-                            <strong>Gede Erik Aktama, S.Pd., M.Pd.</strong> adalah akademisi dan praktisi teknologi yang berdomisili di Manado, Sulawesi Utara. Beliau saat ini mengemban amanah sebagai <strong>Dosen Tetap sekaligus Ketua Program Studi Sistem Komputer (S1)</strong> pada Fakultas Sains dan Teknologi di <strong>Universitas Parna Raya (UNIPAR)</strong>.
+                            <strong>Gede Erik Aktama, S.Pd., M.Pd.</strong> adalah akademisi berjabatan fungsional <strong>Lektor (Kemendiktisaintek RI)</strong> dan praktisi teknologi berbasis di Manado, Sulawesi Utara. Beliau saat ini mengemban amanah sebagai <strong>Dosen Tetap sekaligus Ketua Program Studi S1 Sistem Komputer</strong> pada Fakultas Sains dan Teknologi di <strong>Universitas Parna Raya (UNIPAR)</strong> dengan Ranting Ilmu / Bidang Kepakaran Resmi: <strong>Basis Data dan Pemrograman</strong>.
                         </p>
                         <p>
-                            Selain aktivitas di kampus, beliau dipercaya di tingkat kementerian sebagai <strong>Fasilitator Nasional Koding dan Kecerdasan Artifisial (KKA) Kemdikdasmen</strong>, berperan aktif dalam pelatihan dan diseminasi kurikulum komputasi bagi tenaga pendidik di seluruh penjuru Indonesia.
+                            Di ranah literasi dan karya tulis ilmiah, beliau adalah penulis <strong>5 buku referensi dan ajar</strong> ber-ISBN resmi Perpustakaan Nasional RI (termasuk karya bertema Python, Sistem Basis Data, dan SIG) serta pemegang sertifikat Hak Kekayaan Intelektual (HKI) Kemenkumham RI untuk modul pendidikan jaringan dan keamanan sistem komputer.
                         </p>
                         <p>
-                            Dalam ranah bisnis dan industri teknologi, beliau adalah <strong>CEO PT Aktama Digital Antika</strong> dengan jenama <em>Aktama Digital</em> yang bergerak di bidang penyelenggaraan pelatihan AI untuk administrasi perkantoran, masterclass Microsoft Word, bimbingan jaringan komputer, serta pengembangan software dan digital marketing.
+                            Selain aktivitas di kampus, beliau dipercaya di tingkat kementerian sebagai <strong>Fasilitator Nasional Koding dan Kecerdasan Artifisial (KKA) Kemdikdasmen</strong>, berperan aktif dalam pelatihan dan diseminasi kurikulum komputasi bagi ribuan tenaga pendidik di seluruh penjuru Indonesia.
+                        </p>
+                        <p>
+                            Dalam ranah bisnis dan industri teknologi, beliau adalah <strong>CEO PT Aktama Digital Antika</strong> dengan jenama <em>Aktama Digital</em> yang bergerak di bidang pelatihan AI perkantoran, masterclass Microsoft Word dokumen formal, bimbingan jaringan komputer, serta pengembangan software dan digital marketing.
                         </p>
                     </div>
                 </div>

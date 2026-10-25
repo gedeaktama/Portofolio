@@ -13,9 +13,22 @@
         </a>
 
         <div class="flex flex-wrap items-center gap-2 mb-4">
-            <span class="px-3 py-1 rounded-md text-xs font-bold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                {{ $publication->indexing_status }}
-            </span>
+            @if(str_contains($publication->indexing_status, 'ISBN'))
+                <span class="px-3 py-1 rounded-md text-xs font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
+                    <i data-lucide="book" class="w-3.5 h-3.5"></i>
+                    <span>{{ $publication->indexing_status }}</span>
+                </span>
+            @elseif(str_contains($publication->indexing_status, 'HKI'))
+                <span class="px-3 py-1 rounded-md text-xs font-bold bg-purple-500/15 text-purple-300 border border-purple-500/30 flex items-center gap-1.5">
+                    <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                    <span>{{ $publication->indexing_status }}</span>
+                </span>
+            @else
+                <span class="px-3 py-1 rounded-md text-xs font-bold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                    {{ $publication->indexing_status }}
+                </span>
+            @endif
+
             @if($publication->is_first_author)
                 <span class="px-3 py-1 rounded-md text-xs font-medium bg-blue-500/15 text-blue-300 border border-blue-500/30">
                     Penulis Pertama
@@ -35,9 +48,9 @@
 
         <div class="mt-4 pt-4 border-t border-white/10 text-xs sm:text-sm text-slate-300 flex flex-wrap gap-4">
             <div><strong>Penulis:</strong> {{ $publication->authors }}</div>
-            <div><strong>Jurnal:</strong> {{ $publication->journal_name }}</div>
+            <div><strong>Penerbit / Jurnal:</strong> {{ $publication->journal_name }}</div>
             @if($publication->volume)
-                <div><strong>Volume/No:</strong> {{ $publication->volume }} {{ $publication->issue }}</div>
+                <div><strong>Volume/Edisi:</strong> {{ $publication->volume }} {{ $publication->issue }}</div>
             @endif
             @if($publication->pages)
                 <div><strong>Halaman:</strong> {{ $publication->pages }}</div>
@@ -49,6 +62,22 @@
 <!-- Main Article Info & Citation -->
 <section class="py-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+        <!-- Certificate Preview if Available -->
+        @if($publication->file_path)
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border-cyan-500/30">
+                <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                    <i data-lucide="award" class="w-5 h-5 text-cyan-400"></i>
+                    <span>Sertifikat Penulis & Bukti Legalitas Resmi</span>
+                </h3>
+                <p class="text-xs text-slate-400 mb-4">
+                    Sertifikat resmi penerbitan buku dari CV. Inovasi Publishing Indonesia / CV. Lingkar Edukasi Indonesia dengan legalitas IKAPI dan Perpustakaan Nasional RI.
+                </p>
+                <div class="rounded-xl overflow-hidden border border-white/10 bg-slate-950/80 p-2 sm:p-3 shadow-2xl">
+                    <img src="{{ asset($publication->file_path) }}" alt="{{ $publication->title }}" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+        @endif
         
         <!-- Abstract Box -->
         <div class="glass-card p-8 rounded-2xl">

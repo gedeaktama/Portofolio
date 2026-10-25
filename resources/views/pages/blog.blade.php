@@ -17,6 +17,22 @@
             <p class="mt-3 text-base sm:text-lg text-slate-300">
                 Ulasan mendalam seputar AI praktis, kurikulum OBE, asesmen RPL, dan strategi digitalisasi masyarakat.
             </p>
+
+            <div class="mt-6 p-4 rounded-2xl bg-gradient-to-r from-blue-600/20 via-cyan-500/20 to-blue-900/30 border border-cyan-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+                        <i data-lucide="newspaper" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold text-white">Pusat Artikel & Edukasi Resmi</div>
+                        <div class="text-xs text-slate-300">Artikel lengkap dan tutorial praktis dipublikasikan terpusat di aktama.com.</div>
+                    </div>
+                </div>
+                <a href="https://aktama.com/artikel" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-lg hover:shadow-cyan-500/30 flex items-center gap-1.5 shrink-0">
+                    <span>Kunjungi aktama.com/artikel</span>
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>

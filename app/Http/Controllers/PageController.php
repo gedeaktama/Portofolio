@@ -31,7 +31,7 @@ class PageController extends Controller
     {
         $profile = Profile::where('is_active', true)->first();
         $skills = Skill::orderBy('order')->get();
-        $publications = Publication::published()->take(3)->get();
+        $publications = Publication::published()->take(6)->get();
         $researchProjects = ResearchProject::featured()->take(2)->get();
         $communityServices = CommunityService::featured()->take(2)->get();
         $projects = PortfolioProject::featured()->with('category')->take(3)->get();
