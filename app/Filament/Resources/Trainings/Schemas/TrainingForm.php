@@ -18,11 +18,10 @@ class TrainingForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(['default' => 1, 'lg' => 3])
             ->components([
-                Grid::make(['default' => 1, 'lg' => 3])
-                    ->schema([
-                        // Kolom Kiri / Materi & Deskripsi Pelatihan
-                        Group::make()
+                // Kolom Kiri / Materi & Deskripsi Pelatihan
+                Group::make()
                             ->schema([
                                 Section::make('Informasi Pelatihan & Workshop')
                                     ->description('Uraikan topik, tema, dan materi pelatihan atau sertifikasi.')
@@ -133,7 +132,6 @@ class TrainingForm
                                     ]),
                             ])
                             ->columnSpan(['default' => 1, 'lg' => 1]),
-                    ]),
             ]);
     }
 }

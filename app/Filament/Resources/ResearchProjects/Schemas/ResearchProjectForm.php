@@ -18,11 +18,10 @@ class ResearchProjectForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(['default' => 1, 'lg' => 3])
             ->components([
-                Grid::make(['default' => 1, 'lg' => 3])
-                    ->schema([
-                        // Kolom Kiri / Substansi Penelitian
-                        Group::make()
+                // Kolom Kiri / Substansi Penelitian
+                Group::make()
                             ->schema([
                                 Section::make('Substansi & Naskah Riset')
                                     ->description('Informasi mendalam mengenai metodologi, hipotesis, dan luaran penelitian ilmiah.')
@@ -152,7 +151,6 @@ class ResearchProjectForm
                                     ]),
                             ])
                             ->columnSpan(['default' => 1, 'lg' => 1]),
-                    ]),
             ]);
     }
 }

@@ -20,10 +20,9 @@ class BlogPostForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(['default' => 1, 'lg' => 3])
             ->components([
-                Grid::make(['default' => 1, 'lg' => 3])
-                    ->schema([
-                        // Kolom Kiri / Konten Utama (WordPress Editor Area)
+                // Kolom Kiri / Konten Utama (WordPress Editor Area)
                         Group::make()
                             ->schema([
                                 Section::make('Editor Konten Artikel')
@@ -180,7 +179,6 @@ class BlogPostForm
                                     ]),
                             ])
                             ->columnSpan(['default' => 1, 'lg' => 1]),
-                    ]),
             ]);
     }
 }

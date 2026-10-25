@@ -17,11 +17,10 @@ class CommunityServiceForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(['default' => 1, 'lg' => 3])
             ->components([
-                Grid::make(['default' => 1, 'lg' => 3])
-                    ->schema([
-                        // Kolom Kiri / Konten Utama PKM
-                        Group::make()
+                // Kolom Kiri / Konten Utama PKM
+                Group::make()
                             ->schema([
                                 Section::make('Substansi & Laporan PKM')
                                     ->description('Informasi lengkap program Pengabdian Kepada Masyarakat (PKM).')
@@ -133,7 +132,6 @@ class CommunityServiceForm
                                     ]),
                             ])
                             ->columnSpan(['default' => 1, 'lg' => 1]),
-                    ]),
             ]);
     }
 }

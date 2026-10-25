@@ -20,11 +20,10 @@ class PortfolioProjectForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(['default' => 1, 'lg' => 3])
             ->components([
-                Grid::make(['default' => 1, 'lg' => 3])
-                    ->schema([
-                        // Kolom Kiri / Informasi Utama Proyek
-                        Group::make()
+                // Kolom Kiri / Informasi Utama Proyek
+                Group::make()
                             ->schema([
                                 Section::make('Detail & Narasi Proyek')
                                     ->description('Uraikan latar belakang masalah, solusi rekayasa, dan fitur-fitur unggulan sistem.')
@@ -178,7 +177,6 @@ class PortfolioProjectForm
                                     ]),
                             ])
                             ->columnSpan(['default' => 1, 'lg' => 1]),
-                    ]),
             ]);
     }
 }

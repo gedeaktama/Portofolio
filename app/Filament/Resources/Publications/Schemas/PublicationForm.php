@@ -18,11 +18,10 @@ class PublicationForm
     public static function configure(Schema $schema): Schema
     {
         return $schema
+            ->columns(['default' => 1, 'lg' => 3])
             ->components([
-                Grid::make(['default' => 1, 'lg' => 3])
-                    ->schema([
-                        // Kolom Kiri / Naskah Buku & Paper
-                        Group::make()
+                // Kolom Kiri / Naskah Buku & Paper
+                Group::make()
                             ->schema([
                                 Section::make('Informasi Buku & Naskah Ilmiah')
                                     ->description('Judul, penulis, sinopsis buku, dan ringkasan karya ilmiah.')
@@ -147,7 +146,6 @@ class PublicationForm
                                     ]),
                             ])
                             ->columnSpan(['default' => 1, 'lg' => 1]),
-                    ]),
             ]);
     }
 }
