@@ -40,11 +40,12 @@ echo "=========================================================="
 
 cd "$APP_ROOT"
 
-echo "==> 1. Mengambil kode terbaru dari GitHub (git pull)..."
-git pull origin main
+echo "==> 1. Mengambil kode terbaru dari GitHub..."
+git fetch origin main
+git reset --hard origin/main
 
 echo "==> 2. Menginstal dependensi PHP untuk produksi..."
-"$PHP_BIN" "$COMPOSER_BIN" install --no-dev --optimize-autoloader
+"$PHP_BIN" "$COMPOSER_BIN" install --no-dev --optimize-autoloader --no-interaction
 
 if grep -q "APP_KEY=$" .env || grep -q "APP_KEY=\"\"" .env; then
   echo "==> Men-generate APP_KEY baru..."
