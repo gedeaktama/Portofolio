@@ -347,7 +347,7 @@
                     </div>
                     <div class="pt-4 border-t border-white/10 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Lokasi: Manado, Sulut</span>
-                        <a href="{{ route('research-community') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
+                        <a href="{{ route('research.community') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
                             <span>Detail PKM</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -409,7 +409,7 @@
                     </div>
                     <div class="pt-4 border-t border-white/10 flex items-center justify-between">
                         <span class="text-xs text-slate-400">Lokasi: Indonesia Timur</span>
-                        <a href="{{ route('research-community') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
+                        <a href="{{ route('research.community') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
                             <span>Detail PKM</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
