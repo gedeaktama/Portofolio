@@ -380,6 +380,48 @@ class DatabaseSeeder extends Seeder
         // 8. Community Services (PKM)
         $communityServices = [
             [
+                'title' => 'Pemanfaatan Teknologi Kecerdasan Artifisial (AI) Guna Mendorong Efisiensi dan Produktivitas Kerja UPTD Bapelkes Prov. Sulut',
+                'slug' => 'pkm-ai-efisiensi-produktivitas-kerja-bapelkes-sulut',
+                'location' => 'UPTD Bapelkes Prov. Sulut, Manado',
+                'partner' => 'UPTD Balai Pelatihan Kesehatan Dinas Kesehatan Prov. Sulut',
+                'partner_website' => null,
+                'year' => '2026',
+                'role' => 'Ketua Tim Pengabdian Masyarakat & Pemateri Utama',
+                'description' => 'Bimbingan teknis terapan bagi jajaran aparatur, widyaiswara, dan tenaga kesehatan UPTD Bapelkes Sulut dalam mengadopsi AI generatif untuk penyusunan modul diklat, analisis laporan evaluasi, dan otomasi naskah dinas.',
+                'outcomes' => 'Peningkatan literasi AI aparatur nakes, standarisasi prompt pembuatan kurikulum modul diklat kesehatan, serta reduksi waktu drafting dinas hingga 80%.',
+                'image_url' => 'images/pkm-bapelkes-sulut.jpg',
+                'is_featured' => true,
+                'order' => 1,
+            ],
+            [
+                'title' => 'Pemanfaatan Artificial Intelligence (AI) untuk Meningkatkan Efisiensi Administrasi dan Kualitas Pelayanan Publik DPMPTSP Kota Bitung',
+                'slug' => 'pkm-ai-efisiensi-administrasi-pelayanan-publik-dpmptsp-bitung',
+                'location' => 'Kantor DPMPTSP Kota Bitung, Sulawesi Utara',
+                'partner' => 'Dinas Penanaman Modal & Pelayanan Terpadu Satu Pintu Kota Bitung',
+                'partner_website' => null,
+                'year' => '2026',
+                'role' => 'Narasumber & Instruktur Utama',
+                'description' => 'Pelatihan langsung bagi aparatur perizinan dalam perumusan prompt kedinasan formula RCTDFC, verifikasi akurasi CVVU naskah dinas, formulasi FAQ regulasi OSS-RBA, dan analisis tren permohonan izin 446 berkas pelayanan publik.',
+                'outcomes' => 'Penerapan SOP penanganan aduan masyarakat berbasis respon cepat, pemotongan waktu penyusunan nota dinas dari 45 menit ke 5 menit, dan kepatuhan Zero PII data privacy ASN.',
+                'image_url' => 'images/pkm-dpmptsp-bitung.jpg',
+                'is_featured' => true,
+                'order' => 2,
+            ],
+            [
+                'title' => 'Optimalisasi Proses Operasional Industri Telekomunikasi Internasional melalui Pemanfaatan Kecerdasan Artifisial (AI)',
+                'slug' => 'pkm-ai-operasional-industri-telekomunikasi-telin',
+                'location' => 'PT Telin Network Indonesia Timur',
+                'partner' => 'PT Telekomunikasi Indonesia International (Telin)',
+                'partner_website' => null,
+                'year' => '2026',
+                'role' => 'Ketua Tim Pengabdian Masyarakat & Instruktur',
+                'description' => 'Diseminasi teknologi kecerdasan artifisial dan otomasi proses operasional bagi personil teknis PT Telin Network Indonesia Timur dalam pemantauan kabel laut dan pelaporan teknis korporasi.',
+                'outcomes' => 'Peningkatan kompetensi staf teknis industri telekomunikasi dalam memanfaatkan generative AI dan otomasi data jaringan internasional.',
+                'image_url' => 'images/pkm-telin.jpg',
+                'is_featured' => true,
+                'order' => 3,
+            ],
+            [
                 'title' => 'Pemanfaatan Digital Marketing Dalam Pemasaran Produk Rumah Panggung di Kelurahan Woloan Kecamatan Tomohon Barat Kota Tomohon',
                 'slug' => 'digital-marketing-rumah-panggung-woloan-tomohon',
                 'location' => 'Kelurahan Woloan, Tomohon Barat, Kota Tomohon, Sulawesi Utara',
@@ -390,8 +432,8 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Program pendampingan dan digitalisasi bagi pengrajin industri tradisional rumah panggung kayu khas Minahasa. Mencakup pelatihan dasar pemasaran digital, pengembangan situs resmi berbasis WordPress teroptimasi SEO, pemanfaatan Google Analytics untuk analisis pasar mancanegara, serta pelibatan mahasiswa dalam skema MBKM.',
                 'outcomes' => 'Situs resmi woloanjaya.com aktif beroperasi, peningkatan jangkauan pemesanan rumah panggung antar-provinsi dan ekspor, serta peningkatan literasi digital mitra industri.',
                 'image_url' => 'images/workshop-seminar.jpg',
-                'is_featured' => true,
-                'order' => 1,
+                'is_featured' => false,
+                'order' => 4,
             ],
         ];
         foreach ($communityServices as $cs) {
@@ -400,6 +442,32 @@ class DatabaseSeeder extends Seeder
 
         // 9. Trainings
         $trainings = [
+            [
+                'title' => 'Workshop Prompt Kedinasan Formula RCTDFC & Verifikasi CVVU bagi ASN DPMPTSP Kota Bitung',
+                'slug' => 'workshop-prompt-kedinasan-rctdfc-cvvu-dpmptsp-bitung',
+                'theme' => 'Kecerdasan Artifisial & Pelayanan Publik Terpadu',
+                'organizer' => 'DPMPTSP Kota Bitung',
+                'role' => 'Narasumber & Instruktur Utama',
+                'event_date' => '2026-10-08',
+                'location' => 'Kantor DPMPTSP Kota Bitung, Sulawesi Utara',
+                'description' => 'Pelatihan hands-on perancangan structured prompt naskah dinas, penanganan FAQ perizinan OSS-RBA, dan proteksi kerahasiaan data ASN (Zero PII).',
+                'image_url' => 'images/pkm-dpmptsp-bitung.jpg',
+                'is_featured' => true,
+                'order' => 1,
+            ],
+            [
+                'title' => 'Bimbingan Teknis Implementasi AI dalam Tata Kelola Modul & Administrasi Diklat Tenaga Kesehatan',
+                'slug' => 'bimtek-ai-modul-diklat-nakes-bapelkes-sulut',
+                'theme' => 'Kecerdasan Artifisial Sektor Kesehatan & Pelatihan',
+                'organizer' => 'UPTD Bapelkes Dinas Kesehatan Prov. Sulut',
+                'role' => 'Narasumber Utama',
+                'event_date' => '2026-10-21',
+                'location' => 'Kampus UPTD Bapelkes Prov. Sulut, Manado',
+                'description' => 'Bimtek intensif adopsi AI generatif bagi widyaiswara dan staf operasional dalam perancangan kurikulum pelatihan nakes dan efisiensi laporan naskah dinas.',
+                'image_url' => 'images/pkm-bapelkes-sulut.jpg',
+                'is_featured' => true,
+                'order' => 2,
+            ],
             [
                 'title' => 'Pemanfaatan Artificial Intelligence (AI) dalam Meningkatkan Efisiensi Pekerjaan Administratif',
                 'slug' => 'pemanfaatan-ai-efisiensi-pekerjaan-administratif-polres-mitra',
@@ -411,7 +479,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Pelatihan terapan bagi personil kepolisian untuk memanfaatkan AI dalam otomasi drafting dokumen dinas, perumusan laporan administratif terstruktur, serta penerapan tata kelola keamanan informasi dinas.',
                 'image_url' => 'images/workshop-seminar.jpg',
                 'is_featured' => true,
-                'order' => 1,
+                'order' => 3,
             ],
             [
                 'title' => 'Bimbingan Teknis Fasilitator Koding dan Kecerdasan Artifisial (KKA)',
@@ -424,7 +492,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Program penguatan kompetensi pedagogis dan komputasional bagi pendidik di seluruh penjuru Indonesia dalam mengadopsi modul KKA sesuai kurikulum nasional.',
                 'image_url' => 'images/workshop-seminar.jpg',
                 'is_featured' => true,
-                'order' => 2,
+                'order' => 4,
             ],
             [
                 'title' => 'Pelatihan Masterclass Microsoft Word & Manajemen Dokumen Akademik Formal',
@@ -436,8 +504,8 @@ class DatabaseSeeder extends Seeder
                 'location' => 'Manado, Sulawesi Utara',
                 'description' => 'Pelatihan mendalam penyusunan dokumen SK, SOP, LED Akreditasi, dan buku pedoman menggunakan fitur style otomatis, penomoran terpadu, dan sitasi terintegrasi.',
                 'image_url' => 'images/workshop-seminar.jpg',
-                'is_featured' => true,
-                'order' => 3,
+                'is_featured' => false,
+                'order' => 5,
             ],
         ];
         foreach ($trainings as $tr) {

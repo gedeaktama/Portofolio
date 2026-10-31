@@ -323,63 +323,94 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-            <!-- PKM Woloan Box -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            <!-- Box 1: Bapelkes Sulut -->
             <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                <div class="h-60 overflow-hidden relative">
-                    <img src="{{ asset('images/workshop-seminar.jpg') }}" alt="PKM Digital Marketing Woloan" class="w-full h-full object-cover">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="{{ asset('images/pkm-bapelkes-sulut.jpg') }}" alt="PKM AI Bapelkes Prov Sulut" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0e172c] via-transparent to-transparent"></div>
-                    <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white shadow-lg">
+                    <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white shadow-lg">
                         Pengabdian Masyarakat (PKM)
                     </div>
                 </div>
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
                         <div class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
-                            Kelurahan Woloan, Tomohon Barat • Mitra: Woloan Jaya
+                            UPTD Bapelkes Prov. Sulut • Pemateri Utama
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">
-                            Pemanfaatan Digital Marketing Produk Rumah Panggung
+                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">
+                            Pemanfaatan AI untuk Efisiensi & Produktivitas Kerja
                         </h3>
-                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                            Pendampingan komprehensif bagi pengrajin kayu tradisional Woloan melalui pembuatan web resmi berbasis WordPress, integrasi Google Analytics, serta implementasi pemasaran digital berorientasi pasar ekspor.
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                            Bimbingan teknis intensif bagi jajaran pegawai serta tenaga kesehatan Bapelkes Sulut dalam mengadopsi AI generatif untuk penyusunan modul diklat, evaluasi pelatihan, dan naskah dinas.
                         </p>
                     </div>
                     <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Mitra: woloanjaya.com</span>
-                        <a href="https://woloanjaya.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
-                            <span>Kunjungi Situs Mitra</span>
-                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        <span class="text-xs text-slate-400">Lokasi: Manado, Sulut</span>
+                        <a href="{{ route('research-community') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
+                            <span>Detail PKM</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Pelatihan AI Polres Mitra Box -->
+            <!-- Box 2: DPMPTSP Kota Bitung -->
             <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                <div class="h-60 overflow-hidden relative">
-                    <img src="{{ asset('images/research-ai.jpg') }}" alt="Pelatihan AI Polres Mitra" class="w-full h-full object-cover">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="{{ asset('images/pkm-dpmptsp-bitung.jpg') }}" alt="Workshop AI DPMPTSP Kota Bitung" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0e172c] via-transparent to-transparent"></div>
-                    <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-600 text-white shadow-lg">
-                        Pelatihan Instansi Publik
+                    <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white shadow-lg">
+                        Pelayanan Publik Terpadu
                     </div>
                 </div>
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
                         <div class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
-                            Kepolisian Resor Minahasa Tenggara • Pemateri Utama
+                            DPMPTSP Kota Bitung • Narasumber Utama
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">
-                            Pemanfaatan AI dalam Efisiensi Pekerjaan Administratif
+                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">
+                            Workshop AI Administrasi Perizinan & Layanan Publik
                         </h3>
-                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                            Workshop intensif bagi personil kepolisian untuk mengadopsi kecerdasan artifisial secara terarah dalam pembuatan draf surat dinas, resume laporan operasional, dan otomasi administrasi publik yang cepat dan aman.
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                            Pelatihan langsung perumusan prompt kedinasan formula RCTDFC, verifikasi akurasi CVVU naskah dinas, formulasi FAQ regulasi OSS-RBA, dan analisis tren permohonan izin ASN Bitung.
                         </p>
                     </div>
                     <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Lokasi: Polres Mitra</span>
+                        <span class="text-xs text-slate-400">Lokasi: Kota Bitung</span>
                         <a href="{{ route('trainings') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
                             <span>Detail Pelatihan</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 3: PT Telin -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="{{ asset('images/pkm-telin.jpg') }}" alt="Optimalisasi AI PT Telin" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0e172c] via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-600 text-white shadow-lg">
+                        Kemitraan Industri
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
+                            PT Telin Network Indonesia Timur • Instruktur
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">
+                            Optimalisasi Operasional Industri Telekomunikasi AI
+                        </h3>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                            Seminar dan bimbingan teknis optimalisasi proses operasional industri telekomunikasi internasional menggunakan AI generative dan automasi pelaporan data teknis jaringan.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Lokasi: Indonesia Timur</span>
+                        <a href="{{ route('research-community') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
+                            <span>Detail PKM</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>
