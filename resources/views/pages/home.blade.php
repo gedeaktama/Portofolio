@@ -152,22 +152,27 @@
                 </a>
             </div>
 
-            <!-- Pilar 2: Fasilitator KKA Kemdikdasmen -->
+            <!-- Pilar 2: Fasilitator KKA Kemendikdasmen -->
             <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-cyan-500/30">
                 <div>
                     <div class="w-12 h-12 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-5">
                         <i data-lucide="sparkles" class="w-6 h-6"></i>
                     </div>
-                    <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Kemdikdasmen RI</span>
+                    <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Kemendikdasmen RI</span>
                     <h3 class="text-lg font-bold text-white mt-1 mb-2">Fasilitator Nasional KKA</h3>
                     <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                        Fasilitator Nasional Koding dan Kecerdasan Artifisial (KKA) untuk menggerakkan literasi komputasional tenaga pendidik se-Indonesia.
+                        Fasilitator & Pengajar Resmi Koding dan Kecerdasan Artifisial (KKA) Kemendikdasmen RI (Sertifikat No. 0533/B/GT.02.00/2025). Berpengalaman melatih guru SMP, SMA, dan SMK di Minahasa Selatan.
                     </p>
                 </div>
-                <a href="{{ route('trainings') }}" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 transition-colors">
-                    <span>Lihat Pelatihan</span>
-                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
+                <div class="flex items-center justify-between pt-3 border-t border-white/5">
+                    <a href="{{ route('trainings') }}" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 transition-colors">
+                        <span>Lihat Pelatihan</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <a href="{{ asset('images/sertifikat-kka-kemendikdasmen.pdf') }}" target="_blank" class="text-[11px] text-slate-300 hover:text-white flex items-center gap-1 font-medium bg-white/5 px-2.5 py-1 rounded-lg border border-white/10 hover:border-cyan-500/40">
+                        <i data-lucide="file-text" class="w-3 h-3 text-cyan-400"></i> Sertifikat
+                    </a>
+                </div>
             </div>
 
             <!-- Pilar 3: CEO Aktama Digital -->
@@ -323,30 +328,30 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-            <!-- Box 1: Bapelkes Sulut -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            <!-- Box 1: PKM Woloan Jaya -->
             <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                <div class="h-56 overflow-hidden relative">
-                    <img src="{{ asset('images/pkm-bapelkes-sulut.jpg') }}" alt="PKM AI Bapelkes Prov Sulut" class="w-full h-full object-cover">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="{{ asset('images/pkm-woloan-jaya.jpg') }}" alt="PKM Digital Marketing Woloan Jaya" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0e172c] via-transparent to-transparent"></div>
                     <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white shadow-lg">
-                        Pengabdian Masyarakat (PKM)
+                        Hibah Kemendiktisaintek BIMA
                     </div>
                 </div>
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
                         <div class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
-                            UPTD Bapelkes Prov. Sulut • Pemateri Utama
+                            Kelurahan Woloan, Tomohon • Mitra: Woloan Jaya
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">
-                            Pemanfaatan AI untuk Efisiensi & Produktivitas Kerja
+                        <h3 class="text-xl font-bold text-white mb-2 leading-snug">
+                            Digital Marketing Produk Rumah Panggung Tradisional Woloan
                         </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Bimbingan teknis intensif bagi jajaran pegawai serta tenaga kesehatan Bapelkes Sulut dalam mengadopsi AI generatif untuk penyusunan modul diklat, evaluasi pelatihan, dan naskah dinas.
+                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            Program Pengabdian kepada Masyarakat (PKM BIMA Diktisaintek) bersama LPPM Universitas Parna Raya mendampingi perajin kayu tradisional Woloan melalui website resmi woloanjaya.com, integrasi SEO analitik, serta strategi pemasaran digital pasar ekspor.
                         </p>
                     </div>
                     <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Lokasi: Manado, Sulut</span>
+                        <span class="text-xs text-slate-400">Mitra: woloanjaya.com</span>
                         <a href="{{ route('research.community') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
                             <span>Detail PKM</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
@@ -355,29 +360,29 @@
                 </div>
             </div>
 
-            <!-- Box 2: DPMPTSP Kota Bitung -->
+            <!-- Box 2: Pelatihan KKA Kemendikdasmen Minsel -->
             <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                <div class="h-56 overflow-hidden relative">
-                    <img src="{{ asset('images/pkm-dpmptsp-bitung.jpg') }}" alt="Workshop AI DPMPTSP Kota Bitung" class="w-full h-full object-cover">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="{{ asset('images/pelatihan-kka-sma-smk-minsel.jpg') }}" alt="Pelatihan KKA Kemendikdasmen Minahasa Selatan" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0e172c] via-transparent to-transparent"></div>
                     <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white shadow-lg">
-                        Pelayanan Publik Terpadu
+                        Fasilitator Nasional KKA
                     </div>
                 </div>
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
                         <div class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
-                            DPMPTSP Kota Bitung • Narasumber Utama
+                            BGTK Prov. Sulut Kemendikdasmen RI • Pengajar Utama
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">
-                            Workshop AI Administrasi Perizinan & Layanan Publik
+                        <h3 class="text-xl font-bold text-white mb-2 leading-snug">
+                            Pelatihan Koding & Kecerdasan Artifisial Guru SMP, SMA & SMK
                         </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Pelatihan langsung perumusan prompt kedinasan formula RCTDFC, verifikasi akurasi CVVU naskah dinas, formulasi FAQ regulasi OSS-RBA, dan analisis tren permohonan izin ASN Bitung.
+                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            Bimbingan teknis intensif bagi puluhan pendidik jenjang SMP (lokus SMPN 2 Amurang) serta SMA & SMK (lokus SMAN 1 Amurang) se-Kabupaten Minahasa Selatan dalam kurikulum KKA nasional, berpikir komputasional, prompt engineering, dan etika AI.
                         </p>
                     </div>
                     <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Lokasi: Kota Bitung</span>
+                        <span class="text-xs text-slate-400">Lokasi: Kab. Minahasa Selatan</span>
                         <a href="{{ route('trainings') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
                             <span>Detail Pelatihan</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
@@ -386,31 +391,62 @@
                 </div>
             </div>
 
-            <!-- Box 3: PT Telin -->
+            <!-- Box 3: Bapelkes Sulut -->
             <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
-                <div class="h-56 overflow-hidden relative">
-                    <img src="{{ asset('images/pkm-telin.jpg') }}" alt="Optimalisasi AI PT Telin" class="w-full h-full object-cover">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="{{ asset('images/pkm-bapelkes-sulut.jpg') }}" alt="PKM AI Bapelkes Prov Sulut" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0e172c] via-transparent to-transparent"></div>
                     <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-600 text-white shadow-lg">
-                        Kemitraan Industri
+                        Pelatihan Instansi Medis & Diklat
                     </div>
                 </div>
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
                         <div class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
-                            PT Telin Network Indonesia Timur • Instruktur
+                            UPTD Bapelkes Prov. Sulut • Pemateri Utama
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">
-                            Optimalisasi Operasional Industri Telekomunikasi AI
+                        <h3 class="text-xl font-bold text-white mb-2 leading-snug">
+                            Pemanfaatan AI untuk Efisiensi & Produktivitas Kerja
                         </h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Seminar dan bimbingan teknis optimalisasi proses operasional industri telekomunikasi internasional menggunakan AI generative dan automasi pelaporan data teknis jaringan.
+                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            Bimbingan teknis intensif bagi jajaran pegawai serta tenaga kesehatan Bapelkes Dinas Kesehatan Prov. Sulut dalam mengadopsi AI generatif untuk penyusunan modul diklat, evaluasi pelatihan nakes, dan naskah dinas.
                         </p>
                     </div>
                     <div class="pt-4 border-t border-white/10 flex items-center justify-between">
-                        <span class="text-xs text-slate-400">Lokasi: Indonesia Timur</span>
-                        <a href="{{ route('research.community') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
-                            <span>Detail PKM</span>
+                        <span class="text-xs text-slate-400">Lokasi: Manado, Sulut</span>
+                        <a href="{{ route('trainings') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
+                            <span>Detail Pelatihan</span>
+                            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 4: DPMPTSP Kota Bitung -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="{{ asset('images/pkm-dpmptsp-bitung.jpg') }}" alt="Workshop AI DPMPTSP Kota Bitung" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0e172c] via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-600 text-white shadow-lg">
+                        Pelayanan Publik Terpadu
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
+                            DPMPTSP Kota Bitung • Narasumber Utama
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 leading-snug">
+                            Workshop AI Administrasi Perizinan & Layanan Publik
+                        </h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            Pelatihan langsung perumusan prompt kedinasan formula RCTDFC, verifikasi akurasi CVVU naskah dinas, formulasi FAQ regulasi OSS-RBA, dan analisis tren permohonan izin ASN Bitung.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Lokasi: Kota Bitung</span>
+                        <a href="{{ route('trainings') }}" class="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1.5">
+                            <span>Detail Pelatihan</span>
                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                         </a>
                     </div>

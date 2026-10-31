@@ -85,6 +85,38 @@
                     </div>
                 </div>
 
+                <!-- KKA Kemendikdasmen Certification Box -->
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-cyan-400 space-y-3">
+                    <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400"></i>
+                        <span>Fasilitator Nasional KKA</span>
+                    </h4>
+                    <div class="space-y-2 text-xs text-slate-300">
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span class="text-slate-400">Institusi:</span>
+                            <span class="font-bold text-white">Kemendikdasmen RI</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span class="text-slate-400">Sertifikat:</span>
+                            <span class="font-mono text-[11px] text-cyan-300">0533/B/GT.02.00/2025</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span class="text-slate-400">Pola Pelatihan:</span>
+                            <span class="text-white font-medium">40 JP Bauran (Predikat: Baik)</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-1">
+                            <span class="text-slate-400">Wilayah Binaan:</span>
+                            <span class="text-slate-200">Guru SMP & SMA/SMK Minsel</span>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="{{ asset('images/sertifikat-kka-kemendikdasmen.pdf') }}" target="_blank" class="w-full py-2 px-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-xs font-semibold flex items-center justify-center gap-2 transition-colors">
+                            <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                            <span>Buka Sertifikat Resmi (PDF)</span>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Indeksasi Akademik (SINTA & Scholar) -->
                 <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-cyan-500 space-y-3">
                     <h4 class="text-sm font-bold text-white flex items-center gap-2">
